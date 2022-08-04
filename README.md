@@ -21,12 +21,12 @@ Published Site: https://msd-city-explorer.netlify.app/
 
 # Time Estimates
 
-Name of feature: ________________________________
+Name of feature: Setting up repo, react installation, Netlify deployment
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 12:20am
 
-Finish time: _____
+Finish time: 12:50am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30 minutes
