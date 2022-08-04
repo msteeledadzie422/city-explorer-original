@@ -1,4 +1,6 @@
-# Project Name
+# City Explorer App
+
+Published Site: https://msd-city-explorer.netlify.app/
 
 **Author**: Mandela Steele-Dadzie
 
