@@ -17,7 +17,7 @@ class City extends Component {
         location: '',
         show: 'none',
         icon: '',
-        cityImage: '',
+        mapImage: '',
         errorMessage: '',
         showAlert: false
       }
@@ -28,7 +28,7 @@ class City extends Component {
     const url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_CITY_KEY}&q=${this.state.searchQuery}&format=json`;
     axios.get(url).then(
       response => {
-        console.log(response);
+        console.log(url);
         let obj = response.data[0];
         this.setState({
           show: 'show',
@@ -60,7 +60,7 @@ class City extends Component {
           <Button type='submit' className='submit'>Explore!</Button>
         </Form>
         <Card className='mapCard' style={{ width: '40rem'}}>
-          <Card.Img variant ="top" src={this.state.cityImage} />
+          <Card.Img variant ="top" src={this.state.mapImage} />
           <Card.Body>
             <Card.Title>{this.state.location}</Card.Title>
             <div className='holder'>
