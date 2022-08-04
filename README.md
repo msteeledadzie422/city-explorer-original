@@ -15,6 +15,8 @@ A user would need to install npm, axios, and React Bootstrap to be able to run t
 
 ## Architecture
 
+image.png
+
 ## Change Log
 
 First functionality to be added has been a user's city search outputting that city's lattitude and longitude and a map of the city
@@ -44,3 +46,15 @@ Start time: 1am
 Finish time: 1pmm
 
 Actual time needed to complete: 12 hours
+
+-----------------------------------------------------
+
+Name of feature: CSS Styling
+
+Estimate of time needed to complete: 20 minutes
+
+Start time: 5:20pm
+
+Finish time: 5:44pm
+
+Actual time needed to complete: 14 minutes
