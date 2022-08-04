@@ -15,7 +15,6 @@ A user would need to install npm, axios, and React Bootstrap to be able to run t
 
 ## Architecture
 
-
 ## Change Log
 
 First functionality to be added has been a user's city search outputting that city's lattitude and longitude and a map of the city

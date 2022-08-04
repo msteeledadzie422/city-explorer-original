@@ -63,7 +63,7 @@ class City extends Component {
           <Card.Img variant ="top" src={this.state.mapImage} />
           <Card.Body>
             <Card.Title>{this.state.location}</Card.Title>
-            <div className='holder'>
+            <div className='latlon'>
               <Card.Text>Latitude: {this.state.lat}</Card.Text>
               <Card.Text>Longitude: {this.state.lon}</Card.Text>
             </div>
