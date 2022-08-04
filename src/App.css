@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.city {
+  background-color: rgb(60, 69, 78);
+  align-items: center;
+}
+
+.search {
+  background-color: rgb(50, 107, 169);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.searchAndCard {
+  text-align: center;
+  background: rgb(191, 213, 237);
+}
