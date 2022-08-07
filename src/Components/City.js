@@ -4,14 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
+import Weather from './Weather';
 
 const axios = require('axios').default;
 
 
 class City extends Component {
-
-   constructor() {
-      super();
+   constructor(props) {
+      super(props);
       this.state = {
         searchQuery: '',
         location: '',
@@ -19,7 +19,8 @@ class City extends Component {
         icon: '',
         mapImage: '',
         errorMessage: '',
-        showAlert: false
+        showAlert: false,
+        weather: []
       }
    }
 
@@ -37,6 +38,22 @@ class City extends Component {
           lon: obj.lon,
           icon: obj.icon,
           mapImage: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${obj.lat},${obj.lon}&zoom=12&size=400x400&format=png`
+        })
+      })
+      .catch((error) => {
+        const errorMessage = `${error.response.data.error}. ${error.message} (${error.code}).`;
+        this.setState({showAlert: true, errorMessage: errorMessage})
+      })
+  }
+
+  handleWeather = (searchQuery, lat, lon) => {
+    searchQuery.preventDefault();
+    const url = `http://localhost:3001/weather?city_name=${this.state.searchQuery}&lat=${this.state.lat}&lon=${this.state.lon}`;
+    axios.get(url).then(
+      response => {
+        console.log(response, 'response');
+        this.setState({
+          weather: response.data,
         })
       })
       .catch((error) => {
@@ -69,6 +86,10 @@ class City extends Component {
             </div>
           </Card.Body>
         </Card>
+        <Weather weather={this.state.weather}/>
+            <Form onSubmit = {this.handleWeather}>
+                <Button type='submit' className='submit'>Weather!</Button>
+            </Form>
         <Alert show={this.state.showAlert} variant="danger" onClose={() => this.setState({ showAlert: false })} dismissible>
           <Alert.Heading>
             Please check your spelling and try again!
