@@ -58,3 +58,30 @@ Start time: 5:20pm
 Finish time: 5:44pm
 
 Actual time needed to complete: 14 minutes
+
+-----------------------------------------------------
+
+Name of feature: Weather button
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 5:20pm
+
+Finish time: 7:40pm
+
+Actual time needed to complete: 2 hours, 20 minutes
+
+-----------------------------------------------------
+
+Name of feature: Movie button
+
+Estimate of time needed to complete: 1 hours
+
+Start time: 8pm
+
+Finish time: 8:45pm
+
+Actual time needed to complete: 45 minutes
+
+
+
