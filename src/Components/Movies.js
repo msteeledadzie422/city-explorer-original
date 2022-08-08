@@ -4,11 +4,6 @@ import Movie from "./Movie";
 
 
 class Movies extends Component{
-    constructor(props){
-        super(props);
-        console.log(this.props.movies);
-    }
-
     render(){
         return(
             <Row sm={1} md={2} lg={3} xl={4} xxl={5}>
