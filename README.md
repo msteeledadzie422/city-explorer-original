@@ -15,8 +15,8 @@ A user would need to install npm, axios, and React Bootstrap to be able to run t
 
 ## Architecture
 
-[](Lab screenshot2.png)
-[](webrequestcycle.png)
+![](Lab screenshot2.png)
+![](webrequestcycle.png)
 
 ## Change Log
 
