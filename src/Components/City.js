@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import Weather from './Weather';
+import Movies from './Movies';
 
 const axios = require('axios').default;
 
@@ -20,7 +21,8 @@ class City extends Component {
         mapImage: '',
         errorMessage: '',
         showAlert: false,
-        weather: []
+        weather: [],
+        movies: []
       }
    }
 
@@ -62,6 +64,22 @@ class City extends Component {
       })
   }
 
+  handleMovies = (e) => {
+    e.preventDefault();
+    const url = `http://localhost:3001/movies?city_name=${this.state.searchQuery}`;
+    axios.get(url).then(
+      response => {
+        console.log(response, 'response');
+        this.setState({
+          movies: response.data,
+        })
+      })
+      .catch((error) => {
+        const errorMessage = `${error.response.data.error}. ${error.message} (${error.code}).`;
+        this.setState({ showAlert: true, errorMessage: errorMessage })
+      })
+  }
+
    handleChange = (e) => {
     let { value } = e.target;
     value.toLowerCase();
@@ -89,6 +107,10 @@ class City extends Component {
         <Weather weather={this.state.weather}/>
             <Form onSubmit = {this.handleWeather}>
                 <Button type='submit' className='submit'>Weather!</Button>
+            </Form>
+        <Movies movies={this.state.movies} />
+            <Form onSubmit = {this.handleMovies}>
+                <Button type='submit' className='submit'>Movies!</Button>
             </Form>
         <Alert show={this.state.showAlert} variant="danger" onClose={() => this.setState({ showAlert: false })} dismissible>
           <Alert.Heading>
