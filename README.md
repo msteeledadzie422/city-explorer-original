@@ -83,5 +83,14 @@ Finish time: 8:45pm
 
 Actual time needed to complete: 45 minutes
 
+-----------------------------------------------------
 
+Name of feature: Separated Weather and Movies into individual weather days and movies
 
+Estimate of time needed to complete: 1 hours
+
+Start time: 12:30am
+
+Finish time: 1:45pm
+
+Actual time needed to complete: 1 hour, 15 minutes
